@@ -11,8 +11,13 @@ export const metadata: Metadata = {
 };
 
 const getUsers = async()=>{
-  const res = await fetch(`${config.api}/users`)
-  return await res.json() as User[];
+  try {
+    const res = await fetch(`${config.api}/users`)
+    return await res.json() as User[];
+  } catch (error) {
+    console.error("Failed to fetch users:", error);
+    return [];
+  }
 }
 
 export default async function Users() {

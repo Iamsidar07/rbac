@@ -10,8 +10,13 @@ export const metadata: Metadata = {
   description: "Manage user roles and permissions",
 };
 const getRoles = async()=>{
-  const res = await fetch(`${config.api}/roles`)
-  return await res.json() as Role[];
+  try {
+    const res = await fetch(`${config.api}/roles`)
+    return await res.json() as Role[];
+  } catch (error) {
+    console.error("Failed to fetch roles:", error);
+    return [];
+  }
 }
 
 export default async function Roles() {

@@ -11,11 +11,14 @@ export const metadata: Metadata = {
 };
 
 const getPermissions = async()=>{
-  const res = await fetch(`${config.api}/permissions`)
-  return await res.json() as Permission[];
+  try {
+    const res = await fetch(`${config.api}/permissions`)
+    return await res.json() as Permission[];
+  } catch (error) {
+    console.error("Failed to fetch permissions:", error);
+    return [];
+  }
 }
-
-
 
 export default async function Permissions() {
   const data = await getPermissions()
