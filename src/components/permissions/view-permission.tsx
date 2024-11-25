@@ -1,9 +1,9 @@
 "use client"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger, DialogFooter } from "@/components/ui/dialog"
-import { Permission } from "./column" 
 import { Button } from "@/components/ui/button"
 import { EyeIcon } from "lucide-react"
 import { useState } from "react"
+import { Permission } from "@/types"
 
 interface Props {
   permission: Permission 

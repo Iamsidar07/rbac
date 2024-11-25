@@ -1,9 +1,10 @@
 "use client"
 import React from 'react'
-import { columns, Permission } from './column'
+import { columns } from './column'
 import { DataTable } from '../ui/data-table'
 import { useQuery } from '@tanstack/react-query'
 import { EditorCreatePermission } from './edit-or-create-permission'
+import { Permission } from '@/types'
 
 export default function PermissionsTable() {
     const { data, isLoading, error } = useQuery(

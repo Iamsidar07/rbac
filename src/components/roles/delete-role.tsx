@@ -7,12 +7,12 @@ import {
   DialogTrigger,
   DialogFooter,
 } from "@/components/ui/dialog";
-import { Role } from "./column";
 import { Button } from "@/components/ui/button";
 import { Trash2Icon } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { Role } from "@/types";
 
 interface Props {
   role: Role;

@@ -1,9 +1,10 @@
 "use client"
 import React from 'react'
-import { columns, Role } from './column'
+import { columns } from './column'
 import { DataTable } from '../ui/data-table'
 import { useQuery } from '@tanstack/react-query'
 import { EditorCreateRole } from './edit-or-create-role'
+import { Role } from '@/types'
 
 export default function RolesTable() {
     const { data, isLoading, error } = useQuery(
