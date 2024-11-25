@@ -138,7 +138,7 @@ export const EditorCreateUser: FC<Props> = ({
             <span className="hidden sm:inline-flex">Add User</span>
           </Button>
         ) : (
-          <Button size="icon" variant={"ghost"} className="rounded-full">
+          <Button size="icon" variant={"ghost"} className="rounded-full" title="edit user">
             <PenIcon className="h-4 w-4" />
           </Button>
         )}

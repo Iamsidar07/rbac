@@ -49,7 +49,7 @@ export function AppSidebar() {
 
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>User Management</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-primary opacity-80">User Management</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (
@@ -74,7 +74,7 @@ export function AppSidebar() {
           </Avatar>
           <div className={cn("flex flex-col", { hidden: !open })}>
             <p className="font-medium">Manoj Kumar</p>
-            <p className="text-sm opacity-50">Editor</p>
+            <p className="text-sm opacity-90">Editor</p>
           </div>
         </div>
       </SidebarFooter>

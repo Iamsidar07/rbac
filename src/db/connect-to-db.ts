@@ -1,6 +1,7 @@
+import { config } from "@/config"
 import mongoose from "mongoose"
 export const connectToDB = async()=>{
-    const uri = process.env.MONGO_URI
+    const uri = config.mongoUri
     if(!uri) throw new Error('MONGO_URI not found')
     try {
        const {connection} = await mongoose.connect(uri)

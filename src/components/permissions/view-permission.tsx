@@ -19,6 +19,7 @@ export function ViewPermission({ permission }: Props) {
           size="icon"
           variant={"ghost"}
           className="rounded-full"
+          title="view permission"
         >
           <EyeIcon/>
         </Button>

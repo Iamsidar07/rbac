@@ -28,7 +28,7 @@ const PageHeader: FC<Props> = ({ pageTitle, breadcrumbItems }) => {
               <BreadcrumbItem>
                 <BreadcrumbLink
                   href={href}
-                  className={`${idx === breadcrumbItems.length - 1 ? "text-black" : ""}`}
+                  className={`${idx === breadcrumbItems.length - 1 ? "text-black" : "text-primary opacity-80"}`}
                 >
                   {title}
                 </BreadcrumbLink>

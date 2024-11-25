@@ -93,7 +93,7 @@ export const EditorCreatePermission: FC<Props> = ({
             Add Permission
           </Button>
         ) : (
-          <Button size="icon" variant={"ghost"} className="rounded-full">
+          <Button size="icon" variant={"ghost"} className="rounded-full" title="edit permission" >
             <PenIcon className="h-4 w-4" />
           </Button>
         )}

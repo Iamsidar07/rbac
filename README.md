@@ -3,6 +3,9 @@
 ## Description
 This project is a full-stack user management dashboard built with React and Next.js. It allows administrators to manage users, roles, and permissions efficiently. The application provides a responsive interface for easy navigation and management of user data. The backend API is implemented to handle data operations securely.
 
+## Lighthouse Score
+![Lighthouse Score](/src/assets/lighthouse-score.png) 
+
 ## Features
 - **Full-Stack Application**: Built with React for the frontend and Node.js for the backend.
 - **User Management**: Create, read, update, and delete user accounts.

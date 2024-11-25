@@ -44,7 +44,7 @@ export function DeleteUser({ user }: Props) {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button size="icon" variant={"ghost"} className="rounded-full">
+        <Button size="icon" variant={"ghost"} className="rounded-full" title="delete user">
           <Trash2Icon className="h-4 w-4" />
         </Button>
       </DialogTrigger>

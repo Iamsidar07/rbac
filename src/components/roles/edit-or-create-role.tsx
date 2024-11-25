@@ -127,7 +127,7 @@ export const EditorCreateRole: FC<Props> = ({
             Add Role
           </Button>
         ) : (
-          <Button size="icon" variant={"ghost"} className="rounded-full">
+          <Button size="icon" variant={"ghost"} className="rounded-full" title="edit role">
             <PenIcon className="h-4 w-4" />
           </Button>
         )}
