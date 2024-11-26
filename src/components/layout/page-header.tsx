@@ -7,7 +7,7 @@ import {
   BreadcrumbList,
   BreadcrumbSeparator,
 } from "../ui/breadcrumb";
-import { AppWindowMac, PanelLeft } from "lucide-react";
+import { PanelLeft } from "lucide-react";
 import { useSidebar } from "../ui/sidebar";
 import { Button } from "../ui/button";
 
