@@ -127,7 +127,12 @@ export const EditorCreateRole: FC<Props> = ({
             Add Role
           </Button>
         ) : (
-          <Button size="icon" variant={"ghost"} className="rounded-full" title="edit role">
+          <Button
+            size="icon"
+            variant={"ghost"}
+            className="rounded-full"
+            title="edit role"
+          >
             <PenIcon className="h-4 w-4" />
           </Button>
         )}
@@ -196,6 +201,7 @@ export const EditorCreateRole: FC<Props> = ({
               type="button"
               variant="outline"
               onClick={() => setOpen(false)}
+              className="mt-2 sm:mt-0"
             >
               Cancel
             </Button>

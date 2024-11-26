@@ -138,7 +138,12 @@ export const EditorCreateUser: FC<Props> = ({
             <span className="hidden sm:inline-flex">Add User</span>
           </Button>
         ) : (
-          <Button size="icon" variant={"ghost"} className="rounded-full" title="edit user">
+          <Button
+            size="icon"
+            variant={"ghost"}
+            className="rounded-full"
+            title="edit user"
+          >
             <PenIcon className="h-4 w-4" />
           </Button>
         )}
@@ -244,6 +249,7 @@ export const EditorCreateUser: FC<Props> = ({
               type="button"
               variant="outline"
               onClick={() => setOpen(false)}
+              className="mt-2 sm:mt-0"
             >
               Cancel
             </Button>
@@ -252,7 +258,9 @@ export const EditorCreateUser: FC<Props> = ({
               disabled={mutation.isPending}
               className="capitalize"
             >
-              {mutation.isPending && <Loader className="w-4 h-4 mr-1.5 animate-spin" />}
+              {mutation.isPending && (
+                <Loader className="w-4 h-4 mr-1.5 animate-spin" />
+              )}
               {mode} user
             </Button>
           </DialogFooter>

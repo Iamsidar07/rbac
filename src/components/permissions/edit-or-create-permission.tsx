@@ -93,7 +93,12 @@ export const EditorCreatePermission: FC<Props> = ({
             Add Permission
           </Button>
         ) : (
-          <Button size="icon" variant={"ghost"} className="rounded-full" title="edit permission" >
+          <Button
+            size="icon"
+            variant={"ghost"}
+            className="rounded-full"
+            title="edit permission"
+          >
             <PenIcon className="h-4 w-4" />
           </Button>
         )}
@@ -152,10 +157,15 @@ export const EditorCreatePermission: FC<Props> = ({
               type="button"
               variant="outline"
               onClick={() => setOpen(false)}
+              className="mt-2 sm:mt-0"
             >
               Cancel
             </Button>
-            <Button type="submit" disabled={mutation.isPending} className="capitalize">
+            <Button
+              type="submit"
+              disabled={mutation.isPending}
+              className="capitalize"
+            >
               {mutation.isPending && (
                 <Loader className="w-4 h-4 animate-spin mr-1.5" />
               )}

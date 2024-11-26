@@ -1,3 +1,4 @@
+"use client";
 import React, { FC } from "react";
 import {
   Breadcrumb,
@@ -6,6 +7,9 @@ import {
   BreadcrumbList,
   BreadcrumbSeparator,
 } from "../ui/breadcrumb";
+import { AppWindowMac, PanelLeft } from "lucide-react";
+import { useSidebar } from "../ui/sidebar";
+import { Button } from "../ui/button";
 
 export interface BreadcrumbData {
   title: string;
@@ -18,9 +22,15 @@ interface Props {
 }
 
 const PageHeader: FC<Props> = ({ pageTitle, breadcrumbItems }) => {
+  const { toggleSidebar } = useSidebar();
   return (
     <div className="flex flex-col gap-[14px]">
-      <h2 className="text-lg sm:text-2xl font-bold">{pageTitle}</h2>
+      <div className="flex items-center justify-between">
+        <h2 className="text-lg sm:text-2xl font-bold">{pageTitle}</h2>
+        <Button onClick={toggleSidebar} variant={"ghost"} className="md:hidden">
+          <PanelLeft className="text-muted-foreground" />
+        </Button>
+      </div>
       <Breadcrumb>
         <BreadcrumbList>
           {breadcrumbItems.map(({ title, href }, idx) => (
