@@ -5,7 +5,6 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-  DialogFooter,
 } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -63,15 +62,6 @@ export function ViewRole({ role }: Props) {
           </div>
         </div>
 
-        <DialogFooter>
-          <Button
-            variant="outline"
-            type="button"
-            onClick={() => setOpen(false)}
-          >
-            Close
-          </Button>
-        </DialogFooter>
       </DialogContent>
     </Dialog>
   );

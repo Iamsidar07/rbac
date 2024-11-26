@@ -252,7 +252,7 @@ export const EditorCreateUser: FC<Props> = ({
               disabled={mutation.isPending}
               className="capitalize"
             >
-              {mutation.isPending && <Loader className="w-4 h-4 mr-1.5" />}
+              {mutation.isPending && <Loader className="w-4 h-4 mr-1.5 animate-spin" />}
               {mode} user
             </Button>
           </DialogFooter>

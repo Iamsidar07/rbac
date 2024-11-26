@@ -84,7 +84,7 @@ export const columns: ColumnDef<User>[] = [
           <EditorCreateUser
             mode="edit"
             avatar={user.avatar}
-            defaultRoles={user.roles.map((r) => r.name)}
+            defaultRoles={user.roles.map((r) => r._id)}
             email={user.email}
             id={user._id}
             status={user.status}

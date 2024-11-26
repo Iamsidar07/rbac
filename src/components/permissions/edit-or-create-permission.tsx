@@ -8,7 +8,7 @@ import {
   DialogFooter,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { PenIcon, PlusIcon } from "lucide-react";
+import { Loader, PenIcon, PlusIcon } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { FC, useState } from "react";
 import { toast } from "sonner";
@@ -155,10 +155,11 @@ export const EditorCreatePermission: FC<Props> = ({
             >
               Cancel
             </Button>
-            <Button type="submit" disabled={mutation.isPending}>
-              {mutation.isPending
-                ? `${mode === "edit" ? "Updating" : "Creating"}...`
-                : `${mode === "edit" ? "Update" : "Create"} Permission`}
+            <Button type="submit" disabled={mutation.isPending} className="capitalize">
+              {mutation.isPending && (
+                <Loader className="w-4 h-4 animate-spin mr-1.5" />
+              )}
+              {mode} Permission
             </Button>
           </DialogFooter>
         </form>
